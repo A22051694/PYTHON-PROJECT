@@ -1,75 +1,164 @@
-
 # currency_rates.py
-# Dictionary mapping currency ISO codes to rate to INR
-# For offline use; rates are sample values (real rates may differ)
+# Dictionary mapping currency ISO code to rate (relative to INR = 1.0)
+# Update this file by replacing rates from a trusted web source for accuracy.
 
 currency_rates = {
-    "INR": 1.0,
-    "USD": 80.502593,
-    "EUR": 83.373695,
-    "JPY": 0.580753,
-    "GBP": 97.464,         # British Pound (sample rate)
-    "AUD": 53.045,         # Australian Dollar (sample rate)
-    "CAD": 59.824,         # Canadian Dollar (sample rate)
-    "CHF": 92.002,         # Swiss Franc (sample rate)
-    "CNY": 11.325146,      # Chinese Yuan Renminbi
-    "HKD": 10.272882,      # Hong Kong Dollar
-    "SGD": 59.539,         # Singapore Dollar (sample rate)
-    "NZD": 49.532,         # New Zealand Dollar (sample rate)
-    "ZAR": 4.356,          # South African Rand (sample rate)
-    "RUB": 1.320821,       # Russian Ruble
-    "BRL": 15.664,         # Brazilian Real (sample rate)
-    "MXN": 4.822,          # Mexican Peso (sample rate)
-    "IDR": 0.005204,       # Indonesian Rupiah
-    "KRW": 0.061167,       # South Korean Won
-    "PKR": 0.363340,       # Pakistani Rupee
-    "NPR": 0.624707,       # Nepalese Rupee
-    "LKR": 0.219062,       # Sri Lankan Rupee
-    "BDT": 0.731,          # Bangladeshi Taka (sample rate)
-    "THB": 2.313,          # Thai Baht (sample rate)
-    "MYR": 17.193,         # Malaysian Ringgit (sample rate)
-    "PHP": 1.405445,       # Philippine Peso
-    "SAR": 21.468,         # Saudi Riyal (sample rate)
-    "AED": 21.924,         # UAE Dirham (sample rate)
-    "KWD": 262.392055,     # Kuwaiti Dinar
-    "QAR": 22.128,         # Qatari Riyal (sample rate)
-    "OMR": 209.497,        # Omani Rial (sample rate)
-    "JOD": 113.848,        # Jordanian Dinar (sample rate)
-    "EGP": 1.663,          # Egyptian Pound (sample rate)
-    "TRY": 2.755,          # Turkish Lira (sample rate)
-    "IRR": 0.001894,       # Iranian Rial
-    "DZD": 0.597,          # Algerian Dinar (sample rate)
-    "MAD": 7.913,          # Moroccan Dirham (sample rate)
-    "TND": 25.967,         # Tunisian Dinar (sample rate)
-    "LYD": 16.544418,      # Libyan Dinar
-    "KES": 0.555,          # Kenyan Shilling (sample rate)
-    "UGX": 0.021,          # Ugandan Shilling (sample rate)
-    "GHS": 5.994,          # Ghanaian Cedi (sample rate)
-    "NGN": 0.053,          # Nigerian Naira (sample rate)
-    "COP": 0.020,          # Colombian Peso (sample rate)
-    "ARS": 0.091,          # Argentine Peso (sample rate)
-    "CLP": 0.090360,       # Chilean Peso
-    # ... add more currencies here up to 195
+    'AFN': 1.23,
+    'ALL': 0.87,
+    'DZD': 0.60,
+    'AOA': 0.10,
+    'ARS': 0.09,
+    'AMD': 0.21,
+    'AUD': 53.05,
+    'ATD': 0.11,
+    'AZN': 47.80,
+    'BSD': 80.50,
+    'BHD': 213.33,
+    'BDT': 0.73,
+    'BBD': 40.25,
+    'BYN': 24.90,
+    'BEF': 0.12,
+    'BZD': 40.25,
+    'BTN': 1.00,
+    'BOB': 11.65,
+    'BAM': 42.60,
+    'BWP': 6.90,
+    'BRL': 15.66,
+    'BND': 59.54,
+    'BGN': 42.60,
+    'BFA': 0.13,
+    'BIF': 0.03,
+    'KHR': 0.02,
+    'CAD': 59.82,
+    'CVE': 0.09,
+    'KYD': 96.00,
+    'XAF': 0.13,
+    'XOF': 0.13,
+    'CLP': 0.09,
+    'CNY': 11.33,
+    'COP': 0.02,
+    'KMF': 0.08,
+    'CDF': 0.03,
+    'CRC': 0.16,
+    'HRK': 11.90,
+    'CZK': 3.35,
+    'DKK': 11.20,
+    'DJF': 0.46,
+    'DOP': 1.37,
+    'EGP': 1.66,
+    'ERN': 0.07,
+    'ETB': 1.42,
+    'EUR': 83.37,
+    'FJD': 35.20,
+    'GMD': 0.02,
+    'GEL': 29.40,
+    'GHS': 5.99,
+    'GIP': 97.46,
+    'GTQ': 10.35,
+    'GNF': 0.01,
+    'GYD': 0.39,
+    'HTG': 0.61,
+    'HNL': 3.95,
+    'HKD': 10.27,
+    'HUF': 0.22,
+    'ISK': 0.59,
+    'INR': 1.00,
+    'IDR': 0.01,
+    'IQD': 0.07,
+    'IRR': 0.00,
+    'ILS': 21.90,
+    'JMD': 0.52,
+    'JPY': 0.58,
+    'JOD': 113.85,
+    'KZT': 0.18,
+    'KES': 0.56,
+    'KWD': 262.39,
+    'KGS': 0.90,
+    'LAK': 0.00,
+    'LBP': 0.01,
+    'LSL': 4.35,
+    'LRD': 0.01,
+    'LYD': 16.54,
+    'MOP': 9.98,
+    'MKD': 1.42,
+    'MGA': 0.02,
+    'MWK': 0.04,
+    'MYR': 17.19,
+    'MVR': 0.13,
+    'MRU': 0.03,
+    'MUR': 1.80,
+    'MXN': 4.82,
+    'MDL': 4.60,
+    'MNT': 0.02,
+    'MAD': 7.91,
+    'MZN': 1.26,
+    'MMK': 0.04,
+    'NAM': 4.35,
+    'NPR': 0.62,
+    'NZD': 49.53,
+    'NIO': 2.25,
+    'NGN': 0.05,
+    'KPW': 0.01,
+    'NOK': 7.90,
+    'OMR': 209.50,
+    'PKR': 0.36,
+    'PAB': 80.50,
+    'PGK': 21.50,
+    'PYG': 0.01,
+    'PEN': 21.00,
+    'PHP': 1.41,
+    'PLN': 19.80,
+    'QAR': 22.13,
+    'RON': 16.50,
+    'RUB': 1.32,
+    'RWF': 0.08,
+    'SHP': 110.00,
+    'WST': 29.80,
+    'STN': 0.04,
+    'SAR': 21.47,
+    'RSD': 0.71,
+    'SCR': 5.90,
+    'SLL': 0.01,
+    'SGD': 59.54,
+    'SBD': 9.85,
+    'SOS': 0.18,
+    'ZAR': 4.36,
+    'KRW': 0.06,
+    'SSP': 0.06,
+    'LKR': 0.22,
+    'SDG': 0.14,
+    'SRD': 2.35,
+    'SZL': 4.35,
+    'SEK': 7.65,
+    'CHF': 92.00,
+    'SYP': 0.00,
+    'TWD': 2.57,
+    'TJS': 7.35,
+    'TZS': 0.03,
+    'THB': 2.31,
+    'TOP': 34.10,
+    'TTD': 11.90,
+    'TND': 25.97,
+    'TRY': 2.76,
+    'TMT': 0.29,
+    'UGX': 0.02,
+    'UAH': 2.05,
+    'AED': 21.92,
+    'GBP': 97.46,
+    'USD': 80.50,
+    'UYU': 2.05,
+    'UZS': 0.01,
+    'VUV': 0.67,
+    'VES': 0.00,
+    'VND': 0.00,
+    'YER': 0.01,
+    'ZMW': 3.10,
+    'ZWL': 0.01,
 }
 
-# Fill in remaining currencies with sample values for offline use
-# To ensure 195 entries, you may do:
-for i in range(len(currency_rates), 195):
-    currency_rates[f"CUR{i+1}"] = round(0.01 + (i % 50) * 0.1, 6)
-Chilean Peso	11.066826	0.090360
-Chinese Yuan Renminbi	0.088299	11.325146
-Euro	0.011994	83.373695
-Hong Kong Dollar	0.097344	10.272882
-Indian Rupee	81.405795	0.012284
-Indonesian Rupiah	192.167281	0.005204
-Iranian Rial	527.932917	0.001894
-Japanese Yen	1.721902	0.580753
-Kuwaiti Dinar	0.003811	262.392055
-Libyan Dinar	0.060443	16.544418
-Nepalese Rupee	1.600750	0.624707
-Pakistani Rupee	2.752240	0.363340
-Philippine Peso	0.711518	1.405445
-Russian Ruble	0.757105	1.320821
-South Korean Won	16.348645	0.061167
-Sri Lankan Rupee	4.564909	0.219062
-US Dollar	0.012422	80.502593
+# If you want to fetch live rates, use an API and update this dictionary automatically.
+# Example (not for offline use):
+# import requests
+# response = requests.get("API_URL")
+# data = response.json()
+# currency_rates = {k: v for k, v in data["rates"].items()}
